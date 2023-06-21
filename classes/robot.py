@@ -54,4 +54,5 @@ class Robot:
     #Shows the robot in a 3dplot  
     def show_robot(self):
         graph_robot = Grapher()
-        graph_robot.graph(self.x, self.y, self.z)
+        figure = graph_robot.graph(self.x, self.y, self.z)
+        return figure

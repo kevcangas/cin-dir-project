@@ -20,3 +20,4 @@ class Grapher:
         plt.xlim(lim[0])
         plt.ylim(lim[1])
         plt.show()
+        return self.ax1

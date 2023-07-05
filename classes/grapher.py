@@ -10,8 +10,8 @@ import numpy.typing as npt
 #Class Grapher
 class Grapher:
 
-    def __init__(self) -> None:
-        self.fig = plt.figure()
+    def __init__(self, fig) -> None:
+        self.fig = fig
         self.ax1 = self.fig.add_subplot(111, projection='3d')
     
     def graph(self, x:npt.ArrayLike, y:npt.ArrayLike, z:npt.ArrayLike, lim:list=[(-5,5),(-5,5),(-1,9)]):
@@ -19,5 +19,5 @@ class Grapher:
         self.ax1.set_zlim(lim[2])
         plt.xlim(lim[0])
         plt.ylim(lim[1])
-        plt.show()
+        #plt.show()
         return self.ax1
